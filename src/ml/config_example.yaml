@@ -1,0 +1,39 @@
+# Example configuration file for Reservoir Computing
+
+# Data settings
+data_settings:
+  training_data_path: 'data/lorenz_data.h5'  # Path to training data file
+  validation_data_path: null  # Optional path to validation data
+  washout_duration: 1000  # Initial period of reservoir states to discard
+
+# Reservoir hyperparameters
+reservoir_hyperparams:
+  Dr: 1000  # Reservoir size (number of neurons)
+  rho: 1.2  # Desired spectral radius of matrix A
+  degree: 3.0  # Average degree for sparse matrix A
+  sigma_input: 0.1  # Scaling factor for Win elements
+  ridge_beta: 1.0e-6  # Tikhonov regularization parameter β
+  use_nonlinear_output: false  # Whether to apply nonlinearity to reservoir states
+  nonlinear_fraction: 0.5  # Fraction of nodes to apply nonlinearity
+
+# Training settings
+training_settings:
+  train_length: 10000  # Number of time steps to use for training
+
+# Evaluation settings
+evaluation_settings:
+  prediction_length_short: 1000  # Steps for short-term prediction check
+  generation_length_long: 50000  # Steps for climate replication / Lyapunov calculation
+
+# Lyapunov parameters
+lyapunov_params:
+  num_exponents: 10  # How many exponents to calculate
+  transient_steps_lyap: 1000  # Steps to run before starting averaging for Lyapunov
+  orthonormalization_interval: 10  # Steps between QR decompositions
+
+# Output settings
+output_settings:
+  results_dir: 'results/ml/lorenz'  # Directory to save results
+  save_model: true  # Whether to save model matrices
+  save_plots: true  # Whether to save plots
+  save_metrics: true  # Whether to save metrics 
