@@ -1,0 +1,41 @@
+# Sample configuration for Lorenz '63 system
+system_type: lorenz
+
+# Lorenz system parameters (classic chaotic regime)
+system_params:
+  sigma: 10.0
+  rho: 28.0
+  beta: 2.6667  # 8/3
+
+# Simulation settings
+simulation_settings:
+  # Method for generating initial conditions ('random' or 'fixed')
+  initial_conditions: random
+  
+  # For fixed initial conditions, uncomment the following line:
+  # initial_state: [1.0, 1.0, 1.0]
+  
+  # Duration to run before recording (to reach the attractor)
+  transient_time: 10.0
+  
+  # Duration of data to record
+  record_time: 100.0
+  
+  # Internal time step for the solver (should be small)
+  dt_integration: 0.001
+  
+  # Time step for the output data
+  dt_sampling: 0.01
+
+# Optional noise settings
+noise_settings:
+  add_noise: false
+  noise_type: gaussian
+  noise_level: 0.05  # RMS relative to signal RMS
+
+# Output settings
+output_settings:
+  output_path: ./data
+  output_filename: lorenz_data
+  output_format: hdf5  # Options: npy, csv, hdf5
+  save_metadata: true 

@@ -1,0 +1,37 @@
+# Sample configuration for Kuramoto-Sivashinsky system
+system_type: kuramoto_sivashinsky
+
+# Kuramoto-Sivashinsky system parameters
+system_params:
+  L: 60.0    # Domain size (spatial period)
+  Q: 128     # Number of grid points (spatial resolution)
+
+# Simulation settings
+simulation_settings:
+  # Method for generating initial conditions ('random' or 'fixed')
+  initial_conditions: random
+  
+  # Duration to run before recording (to reach statistically steady state)
+  transient_time: 100.0
+  
+  # Duration of data to record
+  record_time: 200.0
+  
+  # Internal time step for the solver (should be small)
+  dt_integration: 0.01
+  
+  # Time step for the output data
+  dt_sampling: 0.25
+
+# Optional noise settings
+noise_settings:
+  add_noise: false
+  noise_type: gaussian
+  noise_level: 0.02  # RMS relative to signal RMS
+
+# Output settings
+output_settings:
+  output_path: ./data
+  output_filename: ks_data
+  output_format: hdf5  # Options: npy, csv, hdf5
+  save_metadata: true 
