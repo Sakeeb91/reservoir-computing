@@ -124,4 +124,12 @@ If you use this work in your research, please cite:
   journal={Journal Name},
   year={2024}
 }
-``` 
+```
+
+## Dataset Citation
+
+This project uses the ECG Heartbeat Categorization Dataset, which is composed of two collections of heartbeat signals derived from:
+1. The MIT-BIH Arrhythmia Dataset (Moody GB, Mark RG. The impact of the MIT-BIH Arrhythmia Database. IEEE Eng in Med and Biol 20(3):45-50 (May-June 2001). (PMID: 11446209))
+2. The PTB Diagnostic ECG Database (Bousseljot, R., Kreiseler, D., & Schnabel, A. (1995). Nutzung der EKG-Signaldatenbank CARDIODAT der PTB über das Internet. Biomedizinische Technik / Biomedical Engineering, 40(s1), 317-318.)
+
+The dataset is available on Kaggle: [ECG Heartbeat Categorization Dataset](https://www.kaggle.com/datasets/shayanfazeli/heartbeat/data) 
