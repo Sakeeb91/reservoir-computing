@@ -114,18 +114,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Citation
-
-If you use this work in your research, please cite:
-```
-@article{reservoir_ecg_2024,
-  title={Reservoir Computing for ECG Anomaly Detection},
-  author={Your Name},
-  journal={Journal Name},
-  year={2024}
-}
-```
-
 ## Dataset Citation
 
 This project uses the ECG Heartbeat Categorization Dataset, which is composed of two collections of heartbeat signals derived from:
